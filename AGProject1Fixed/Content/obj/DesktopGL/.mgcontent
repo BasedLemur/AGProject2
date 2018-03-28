@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/100x50x100Marker.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/100x100x100brick.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/boundingSphereV8.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/cloudV3.FBX</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/dogV6.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/magentaAvatarV6.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/redAvatarV6.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/templeV3.fbx</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/colorTexture.png</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/heightTexture.png</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/inspectorBackground.png</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/marble.png</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/Consolas.spritefont</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/image_0000.png</File>
+    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1Fixed/Content/jiggy.x</File>
+  </SourceFiles>
+</SourceFileCollection>

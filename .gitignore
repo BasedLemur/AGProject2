@@ -1,0 +1,7 @@
+
+*.sln
+.vs/*
+
+*.exe
+
+AGProject1Fixed/obj/Debug/AGProject1Fixed\.csproj\.FileListAbsolute\.txt
