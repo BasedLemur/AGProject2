@@ -102,7 +102,7 @@ namespace AGMGSKv9 {
 		public override void Update(GameTime gameTime) {
 
 			// If the NPAgent should begin searching for a treasure
-			if (AGProject1.CustomItems.TreasureMode && !AGProject1.CustomItems.NPSeekingTreasure) {
+			if (!AGProject1.CustomItems.NPSeekingTreasure) {
 				// find closest non-activated treasure
 				// get distances to each treasure
 				float t1distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X / stage.Spacing, this.agentObject.Translation.Z / stage.Spacing), new Vector2(AGProject1.CustomItems.TREASURE_ONE_LOCATION[0], AGProject1.CustomItems.TREASURE_ONE_LOCATION[1]));
@@ -120,23 +120,23 @@ namespace AGMGSKv9 {
 				Console.WriteLine("" + distances[0].Item1 + ":" + distances[0].Item2.Name + " " + distances[1].Item1 + ":" + distances[1].Item2.Name + " " + distances[2].Item1 + ":" + distances[2].Item2.Name + " " + distances[3].Item1 + ":" + distances[3].Item2.Name);
 
 				// set next target to treasure
-				if(!distances[0].Item2.Activated()) {
+				if(!distances[0].Item2.Activated() && (AGProject1.CustomItems.TreasureMode || distances[0].Item1 <= AGProject1.CustomItems.SEARCH_DISTANCE)) {
 					
 					nextGoal = new NavNode(new Vector3(distances[0].Item2.Object.Translation.X, 0, distances[0].Item2.Object.Translation.Z));
 					treasureGoal = distances[0].Item2;
 					AGProject1.CustomItems.NPSeekingTreasure = true;
 				}
-				else if(!distances[1].Item2.Activated()) {
+				else if(!distances[1].Item2.Activated() && (AGProject1.CustomItems.TreasureMode || distances[1].Item1 <= AGProject1.CustomItems.SEARCH_DISTANCE)) {
 					nextGoal = new NavNode(new Vector3(distances[1].Item2.Object.Translation.X, 0, distances[1].Item2.Object.Translation.Z));
 					treasureGoal = distances[1].Item2;
 					AGProject1.CustomItems.NPSeekingTreasure = true;
 				}
-				else if(!distances[2].Item2.Activated()) {
+				else if(!distances[2].Item2.Activated() && (AGProject1.CustomItems.TreasureMode || distances[2].Item1 <= AGProject1.CustomItems.SEARCH_DISTANCE)) {
 					nextGoal = new NavNode(new Vector3(distances[2].Item2.Object.Translation.X, 0, distances[2].Item2.Object.Translation.Z));
 					treasureGoal = distances[2].Item2;
 					AGProject1.CustomItems.NPSeekingTreasure = true;
 				}
-				else if(!distances[3].Item2.Activated()) {
+				else if(!distances[3].Item2.Activated() && (AGProject1.CustomItems.TreasureMode || distances[3].Item1 <= AGProject1.CustomItems.SEARCH_DISTANCE)) {
 					nextGoal = new NavNode(new Vector3(distances[3].Item2.Object.Translation.X, 0, distances[3].Item2.Object.Translation.Z));
 					treasureGoal = distances[3].Item2;
 					AGProject1.CustomItems.NPSeekingTreasure = true;

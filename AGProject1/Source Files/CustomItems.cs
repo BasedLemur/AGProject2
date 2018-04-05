@@ -69,5 +69,7 @@ namespace AGProject1 {
 		public static readonly int[] TREASURE_TWO_LOCATION = { 447, 453 };
 		public static readonly int[] TREASURE_THREE_LOCATION = { 100, 100 };
 		public static readonly int[] TREASURE_FOUR_LOCATION = { 400, 400 };
+
+		public const int SEARCH_DISTANCE = 4000;
 	}
 }
