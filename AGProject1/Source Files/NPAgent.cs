@@ -105,10 +105,10 @@ namespace AGMGSKv9 {
 			if (!AGProject1.CustomItems.NPSeekingTreasure) {
 				// find closest non-activated treasure
 				// get distances to each treasure
-				float t1distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X / stage.Spacing, this.agentObject.Translation.Z / stage.Spacing), new Vector2(AGProject1.CustomItems.TREASURE_ONE_LOCATION[0], AGProject1.CustomItems.TREASURE_ONE_LOCATION[1]));
-				float t2distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X / stage.Spacing, this.agentObject.Translation.Z / stage.Spacing), new Vector2(AGProject1.CustomItems.TREASURE_TWO_LOCATION[0], AGProject1.CustomItems.TREASURE_TWO_LOCATION[1]));
-				float t3distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X / stage.Spacing, this.agentObject.Translation.Z / stage.Spacing), new Vector2(AGProject1.CustomItems.TREASURE_THREE_LOCATION[0], AGProject1.CustomItems.TREASURE_THREE_LOCATION[1]));
-				float t4distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X / stage.Spacing, this.agentObject.Translation.Z / stage.Spacing), new Vector2(AGProject1.CustomItems.TREASURE_FOUR_LOCATION[0], AGProject1.CustomItems.TREASURE_FOUR_LOCATION[1]));
+				float t1distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X, this.agentObject.Translation.Z), new Vector2(AGProject1.CustomItems.TREASURE_ONE_LOCATION[0] * stage.Spacing, AGProject1.CustomItems.TREASURE_ONE_LOCATION[1] * stage.Spacing));
+				float t2distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X, this.agentObject.Translation.Z), new Vector2(AGProject1.CustomItems.TREASURE_TWO_LOCATION[0] * stage.Spacing, AGProject1.CustomItems.TREASURE_TWO_LOCATION[1] * stage.Spacing));
+				float t3distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X, this.agentObject.Translation.Z), new Vector2(AGProject1.CustomItems.TREASURE_THREE_LOCATION[0] * stage.Spacing, AGProject1.CustomItems.TREASURE_THREE_LOCATION[1] * stage.Spacing));
+				float t4distance = Vector2.Distance(new Vector2(this.agentObject.Translation.X, this.agentObject.Translation.Z), new Vector2(AGProject1.CustomItems.TREASURE_FOUR_LOCATION[0] * stage.Spacing, AGProject1.CustomItems.TREASURE_FOUR_LOCATION[1] * stage.Spacing));
 
 				// put distances into an array, then sort
 				Tuple<float, AGProject1.Treasure> tup1dist = new Tuple<float, AGProject1.Treasure>(t1distance, stage.treasure1);
