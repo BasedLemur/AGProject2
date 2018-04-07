@@ -35,7 +35,7 @@ namespace AGProject1 {
 			return m_object3D;
 		}
 
-		// Set the treasure ot active.
+		// Set the treasure to active.
 		public void Activate() {
 			m_activated = true;
 			m_object3D.Translation = new Vector3(m_object3D.Translation.X, m_object3D.Translation.Y + 100, m_object3D.Translation.Z);

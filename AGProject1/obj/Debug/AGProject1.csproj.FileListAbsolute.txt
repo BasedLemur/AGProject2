@@ -84,3 +84,46 @@ D:\Programming\Projects\AGProject1Fixed\AGProject1\obj\Debug\AGProject1.csprojRe
 D:\Programming\Projects\AGProject1Fixed\AGProject1\obj\Debug\AGProject1.csproj.CoreCompileInputs.cache
 D:\Programming\Projects\AGProject1Fixed\AGProject1\obj\Debug\AGProject1.exe
 D:\Programming\Projects\AGProject1Fixed\AGProject1\obj\Debug\AGProject1.pdb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\Big Bird\12253CD3_c_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\Big Bird\62F432A0_c_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\Big Bird\68235380_c_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\Big Bird\7C2A86D3_c_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\Big Bird\812EA26_c_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\100x100x100brick.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\100x50x100Marker.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\62F432A0_c.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\62F432A0_c_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\bb.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\boundingSphereV8.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\cloudV3.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\colorTexture.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\Consolas.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\dogV6.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\heightTexture.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\image_0000.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\image_0000_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\inspectorBackground.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\jiggy.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\magentaAvatarV6.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\marble.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\marble_0.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\redAvatarV6.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\Content\templeV3.xnb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\AGProject1.exe
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\AGProject1.pdb
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\obj\Debug\AGProject1.csprojResolveAssemblyReference.cache
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\obj\Debug\AGProject1.csproj.CoreCompileInputs.cache
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\obj\Debug\AGProject1.exe
+C:\Users\hamou\Source\Repos\AGProject2\AGProject1\obj\Debug\AGProject1.pdb

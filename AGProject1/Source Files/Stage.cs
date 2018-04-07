@@ -382,7 +382,7 @@ namespace AGMGSKv9 {
 			// help strings
 			inspector.setInfo(0, "Academic Graphics MonoGames 3.6 Starter Kit for CSUN Comp 565 assignments.");
 			inspector.setInfo(1, "Press keyboard for input (not case sensitive 'H' || 'h')   'Esc' to quit");
-			inspector.setInfo(2, "Inspector toggles:  'H' help or info   'M'  matrix or info   'I'  displays next info pane.");
+			inspector.setInfo(2, "Inspector toggles:  'H' help or info   'M'  matrix or info   'I'  displays next info pane     'A'  Treasure info.");
 			inspector.setInfo(3, "Arrow keys move the player in, out, left, or right.  'R' resets player to initial orientation.");
 			inspector.setInfo(4, "Stage toggles:  'B' bounding spheres, 'C' || 'X' cameras, 'T' fixed updates");
 			// initialize empty info strings
@@ -503,8 +503,9 @@ namespace AGMGSKv9 {
 				inspector.setInfo(11, agentLocation(player));
 				inspector.setInfo(12, agentLocation(npAgent));
 				// inspector lines 13 and 14 can be used to describe player and npAgent's status
-				inspector.setMatrices("player", "npAgent", player.AgentObject.Orientation, npAgent.AgentObject.Orientation);
-			}
+				inspector.setMatrices("player", "npAgent", player.AgentObject.Orientation, npAgent.AgentObject.Orientation);			    
+                inspector.setTreasureInformation(AGProject1.CustomItems.NumTreasuresLeft, AGProject1.CustomItems.numTreasures - AGProject1.CustomItems.NumTreasuresLeft - AGProject1.CustomItems.NPCNumTreasuresLeft, AGProject1.CustomItems.NPCNumTreasuresLeft); 
+            }
 			// Process user keyboard events that relate to the render state of the the stage
 			KeyboardState keyboardState = Keyboard.GetState();
 			if (keyboardState.IsKeyDown(Keys.Escape)) Exit();
@@ -519,14 +520,17 @@ namespace AGMGSKv9 {
 			// set help display on
 			else if (keyboardState.IsKeyDown(Keys.H) && !oldKeyboardState.IsKeyDown(Keys.H)) {
 				inspector.ShowHelp = ! inspector.ShowHelp; 
-				inspector.ShowMatrices = false; }
+				inspector.ShowMatrices = false;
+            }
 			// set info display on
 			else if (keyboardState.IsKeyDown(Keys.I) && !oldKeyboardState.IsKeyDown(Keys.I)) 
 				inspector.showInfo();
 			// set miscellaneous display on
 			else if (keyboardState.IsKeyDown(Keys.M) && !oldKeyboardState.IsKeyDown(Keys.M)) {
 				inspector.ShowMatrices = ! inspector.ShowMatrices;
-				inspector.ShowHelp = false; }
+				inspector.ShowHelp = false; 
+                
+            }
 			// toggle update speed between FixedStep and ! FixedStep
 			else if (keyboardState.IsKeyDown(Keys.T) && !oldKeyboardState.IsKeyDown(Keys.T))
 				FixedStepRendering = ! FixedStepRendering;
@@ -545,7 +549,7 @@ namespace AGMGSKv9 {
 			base.Update(gameTime);  // update all GameComponents and DrawableGameComponents
 			currentCamera.updateViewMatrix();
 		}
-
+   
 		/// <summary>
 		/// Draws information in the display viewport.
 		/// Resets the GraphicsDevice's context and makes the sceneViewport active.
