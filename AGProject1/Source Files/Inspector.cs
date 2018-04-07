@@ -56,6 +56,7 @@ public class Inspector {
 	// Display constants
 	private const int InfoPaneSize = 5;	// number of lines / info display pane
 	private const int InfoDisplayStrings = 30;  // number of total display strings
+    private const int PackingBase = 20;
     private const int TreasureBase = 20; 
 	private const int MatrixBase = 5;
 	private const int FirstBase = 10;	 // base to offset for display strings
@@ -164,14 +165,23 @@ public class Inspector {
     /// <summary>
     /// setTreasureInformation sets information about found treasures by the player and the NPC.
     /// </summary>
-    /// <param name="numTreasureLeft"> Description of first matrix</param>
-    /// <param name="numPlayerTagged"> Description of second matrix</param>
-    /// <param name="numNPCTagged"> first matrix</param>
+    /// <param name="numTreasureLeft"> Number of treasures left to find</param>
+    /// <param name="numPlayerTagged"> Number of treasures tagged by player</param>
+    /// <param name="numNPCTagged"> Number of treasures tagged by NPC</param>
     public void setTreasureInformation(int numTreasureLeft, int numPlayerTagged, int numNPCTagged) {
 	    infoBase = TreasureBase;
         infoString[infoBase++] = string.Format("Number of treasures remaining: " + numTreasureLeft);
         infoString[infoBase++] = string.Format("Number of treasures tagged by player: " + numPlayerTagged);
         infoString[infoBase++] = string.Format("Number of treasures tagged by NPC: " + numNPCTagged);
+    }
+
+    /// <summary>
+    /// Set Packing information
+    /// </summary>levelnumTreasureLeft">The packing level</param>
+    public void setPackingInfo(int level) {
+	    infoBase = PackingBase;
+        double[] packLevel = new double[] { 0, 0.33, 0.66, 0.99 };
+        infoString[infoBase++] = string.Format("Packing is at: " + packLevel[level] * 100 + "%");
     }
 		
 /// <summary>

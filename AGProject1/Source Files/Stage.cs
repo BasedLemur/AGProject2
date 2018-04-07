@@ -59,7 +59,7 @@ namespace AGMGSKv9 {
 		protected const int spacing = 150;  // x and z spaces between vertices in the terrain
 		protected const int terrainSize = range * spacing;
 		// Window size
-		private const bool runFullScreen = true;  // set false to use values on next line
+		private const bool runFullScreen = false;  // set false to use values on next line
 		private const int windowWidth = 1280, windowHeight = 800;
 		// Graphics device
 		protected GraphicsDeviceManager graphics;
@@ -116,7 +116,8 @@ namespace AGMGSKv9 {
 		private StreamWriter fout = null;
 		// Stage variables
 		private TimeSpan time;  // if you need to know the time see Property Time
-
+        int packing;
+        Pack pack; 
 
 		public Stage() : base() {
 			graphics = new GraphicsDeviceManager(this);
@@ -430,7 +431,7 @@ namespace AGMGSKv9 {
 			Components.Add(wall);
 			// create a pack for "flocking" algorithms
 			// create a Pack of 6 dogs centered at (450, 500) that is leaderless
-			Pack pack = new Pack(this, "dog", "dogV6", 6, 450, 430, null);
+			pack = new Pack(this, "dog", "dogV6", 15, 450, 430, player.AgentObject);
 			Components.Add(pack);
 			// ----------- OPTIONAL CONTENT HERE -----------------------
 			// Load content for your project here
@@ -505,6 +506,7 @@ namespace AGMGSKv9 {
 				// inspector lines 13 and 14 can be used to describe player and npAgent's status
 				inspector.setMatrices("player", "npAgent", player.AgentObject.Orientation, npAgent.AgentObject.Orientation);			    
                 inspector.setTreasureInformation(AGProject1.CustomItems.NumTreasuresLeft, AGProject1.CustomItems.numTreasures - AGProject1.CustomItems.NumTreasuresLeft - AGProject1.CustomItems.NPCNumTreasuresLeft, AGProject1.CustomItems.NPCNumTreasuresLeft); 
+                inspector.setPackingInfo(pack.flockLevel);
             }
 			// Process user keyboard events that relate to the render state of the the stage
 			KeyboardState keyboardState = Keyboard.GetState();
@@ -530,6 +532,15 @@ namespace AGMGSKv9 {
 				inspector.ShowMatrices = ! inspector.ShowMatrices;
 				inspector.ShowHelp = false; 
                 
+            }
+            else if (keyboardState.IsKeyDown(Keys.P) && !oldKeyboardState.IsKeyDown(Keys.P))
+            {
+                packing++;
+                if(packing >= 4)
+                {
+                    packing = 0;
+                }
+                pack.flockLevel = packing;
             }
 			// toggle update speed between FixedStep and ! FixedStep
 			else if (keyboardState.IsKeyDown(Keys.T) && !oldKeyboardState.IsKeyDown(Keys.T))
