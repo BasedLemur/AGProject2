@@ -13,6 +13,8 @@ namespace AGProject1 {
 	/// </summary>
 	class CustomItems {
 
+		private static Random rand = new Random();
+
 		/// <summary>
 		/// Varaible used to see if lerping should be used when walking.
 		/// This is set and unset when reading the keyboard state, when "L"
@@ -65,10 +67,12 @@ namespace AGProject1 {
 		/// Variables to quickly access the locations of each treasure. Used in
 		/// NPAgent.cs
 		/// </summary>
-		public static readonly int[] TREASURE_ONE_LOCATION = { 496, 500 };
+		public static readonly int[] TREASURE_ONE_LOCATION = { 273, 411 };
 		public static readonly int[] TREASURE_TWO_LOCATION = { 447, 453 };
-		public static readonly int[] TREASURE_THREE_LOCATION = { 100, 100 };
-		public static readonly int[] TREASURE_FOUR_LOCATION = { 400, 400 };
+		public static readonly int[] TREASURE_THREE_LOCATION = { 200, 200 };
+		public static readonly int[] TREASURE_FOUR_LOCATION = { 340, 75 };
+
+		public static readonly bool FORWARD = rand.Next(100) < 50;
 
 		public const int SEARCH_DISTANCE = 4000;
 	}
