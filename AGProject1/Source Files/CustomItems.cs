@@ -61,6 +61,49 @@ namespace AGProject1 {
 			}
 		}
 
+        
+        /// <summary>
+		/// Number of treasures taken by NPC
+		/// Set and unset in NPAgent.cs
+		/// </summary>
+		private static int npcNumTreasuresLeft = 0;
+		public static int NPCNumTreasuresLeft {
+			get {
+				return npcNumTreasuresLeft;
+			}
+			set {
+				npcNumTreasuresLeft = value;
+			}
+		}
+
+        /// <summary>
+		/// Number of treasures taken by player
+		/// Set and unset in NPAgent.cs
+		/// </summary>
+		private static int playerNumTreasuresLeft = 0;
+		public static int PlayerNumTreasuresLeft {
+			get {
+				return playerNumTreasuresLeft;
+			}
+			set {
+				playerNumTreasuresLeft = value;
+			}
+		}
+
+        /// <summary>
+		/// Number of treasures left
+		/// Set and unset in NPAgent.cs
+		/// </summary>
+		private static int numTreasuresLeft = 4;
+		public static int NumTreasuresLeft {
+			get {
+				return numTreasuresLeft;
+			}
+			set {
+				numTreasuresLeft = value;
+			}
+		}
+        
 		/// <summary>
 		/// Variables to quickly access the locations of each treasure. Used in
 		/// NPAgent.cs
@@ -69,6 +112,8 @@ namespace AGProject1 {
 		public static readonly int[] TREASURE_TWO_LOCATION = { 447, 453 };
 		public static readonly int[] TREASURE_THREE_LOCATION = { 100, 100 };
 		public static readonly int[] TREASURE_FOUR_LOCATION = { 400, 400 };
+
+        public static readonly int numTreasures = 4; 
 
 		public const int SEARCH_DISTANCE = 4000;
 	}

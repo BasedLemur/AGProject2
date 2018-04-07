@@ -55,7 +55,8 @@ namespace AGMGSKv9 {
 public class Inspector {
 	// Display constants
 	private const int InfoPaneSize = 5;	// number of lines / info display pane
-	private const int InfoDisplayStrings = 20;  // number of total display strings
+	private const int InfoDisplayStrings = 30;  // number of total display strings
+    private const int TreasureBase = 20; 
 	private const int MatrixBase = 5;
 	private const int FirstBase = 10;	 // base to offset for display strings
 	private const int SecondBase =  15;	// second pane for display strings
@@ -114,7 +115,7 @@ public class Inspector {
 		if (showHelp || showMatrices) 
 				showHelp = showMatrices = false;
 			else 
-				infoCount = (infoCount + 1) % 2;	
+				infoCount = (infoCount + 1) % 3;	
 		}
 
 
@@ -159,37 +160,62 @@ public class Inspector {
 			string.Format("  pos | {0,10:f2} {1,10:f2} {2,10:f2} {3,10:f2} |  {4,10:f2} {5,10:f2} {6,10:f2} {7,10:f2}",
 			m1.M41 / 150, m1.M42 / 150, m1.M43 / 150, m1.M44 / 150,	  m2.M41, m2.M42, m2.M43, m2.M44);
 		}
+
+    /// <summary>
+    /// setTreasureInformation sets information about found treasures by the player and the NPC.
+    /// </summary>
+    /// <param name="numTreasureLeft"> Description of first matrix</param>
+    /// <param name="numPlayerTagged"> Description of second matrix</param>
+    /// <param name="numNPCTagged"> first matrix</param>
+    public void setTreasureInformation(int numTreasureLeft, int numPlayerTagged, int numNPCTagged) {
+	    infoBase = TreasureBase;
+        infoString[infoBase++] = string.Format("Number of treasures remaining: " + numTreasureLeft);
+        infoString[infoBase++] = string.Format("Number of treasures tagged by player: " + numPlayerTagged);
+        infoString[infoBase++] = string.Format("Number of treasures tagged by NPC: " + numNPCTagged);
+    }
 		
 /// <summary>
 /// Draw the current information pane in the inspector display.
 /// Called by the client's Draw(...) method.
 /// </summary>
 /// <param name="spriteBatch"> needed to set display strings</param>
-	public void Draw(SpriteBatch spriteBatch) {
+    public void Draw(SpriteBatch spriteBatch) {
 		Vector2 FontOrigin;
 		spriteBatch.Draw(infoBackground, new Vector2(0, 0), Color.White);
 		if (showHelp) // strings 0..4
 			for (int i = 0; i < InfoPaneSize; i++) {
 				FontOrigin = infoFont.MeasureString(infoString[i]);
-				spriteBatch.DrawString(infoFont, infoString[i], FontPos[i], fontColor); }
+				spriteBatch.DrawString(infoFont, infoString[i], FontPos[i], fontColor); 
+            }
 		else if (showMatrices) { // show info  display strings 5..9
 			infoBase = MatrixBase;
 			for (int i = 0; i < InfoPaneSize; i++) {
 				FontOrigin = infoFont.MeasureString(infoString[infoBase + i]);
-				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); }
-			}
+				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); 
+            }
+		}        
 		else if (infoCount == 0) { // show matrix information strings 10..14
 			int infoBase = FirstBase;
 			for (int i = 0; i < InfoPaneSize; i++) {
 				FontOrigin = infoFont.MeasureString(infoString[infoBase + i]);
-				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); }
-			}
+				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); 
+            }
+		}
 		else if (infoCount == 1) { // show miscellaneous info stings 15..19
 			int infoBase = SecondBase;
 			for (int i = 0; i < InfoPaneSize; i++) {
 				FontOrigin = infoFont.MeasureString(infoString[infoBase + i]);
-				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); }
-			}
+				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); 
+            }
 		}
+        else if (infoCount == 2) { // show miscellaneous info stings 20..24
+			int infoBase = TreasureBase;
+			for (int i = 0; i < InfoPaneSize; i++) {
+				FontOrigin = infoFont.MeasureString(infoString[infoBase + i]);
+				spriteBatch.DrawString(infoFont, infoString[infoBase + i], FontPos[i], fontColor); 
+            }
+			
+        }
+	}
 	}
  }
