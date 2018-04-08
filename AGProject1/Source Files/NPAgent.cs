@@ -58,15 +58,28 @@ namespace AGMGSKv9 {
 		private Path path;
 		private int snapDistance = 20;  // this should be a function of step and stepSize
 		// If using makePath(int[,]) set WayPoint (x, z) vertex positions in the following array
-		private int[,] pathNode = { {505, 490}, {500, 500}, {490, 505},  // bottom, right
-									{435, 505}, {425, 500}, {420, 490},  // bottom, middle
-									{420, 450}, {425, 440}, {435, 435},  // middle, middle
-									{490, 435}, {500, 430}, {505, 420},  // middle, right
-									{505, 105}, {500,  95}, {490,  90},  // top, right
-									{110,  90}, {100,  95}, { 95, 105},  // top, left
-									{ 95, 480}, {100, 490}, {110, 495},  // bottom, left
-									{495, 480} };						  // loop return
+		//private int[,] pathNode = { {505, 490}, {500, 500}, {490, 505},  // bottom, right
+		//							{435, 505}, {425, 500}, {420, 490},  // bottom, middle
+		//							{420, 450}, {425, 440}, {435, 435},  // middle, middle
+		//							{490, 435}, {500, 430}, {505, 420},  // middle, right
+		//							{505, 105}, {500,  95}, {490,  90},  // top, right
+		//							{110,  90}, {100,  95}, { 95, 105},  // top, left
+		//							{ 95, 480}, {100, 490}, {110, 495},  // bottom, left
+		//							{495, 480} };						  // loop return
 
+		private int[,] pathNodeForward = { { 505, 490 }, { 500, 500 }, { 490, 505 },
+											{ 437, 480 }, { 430, 459 }, { 443, 420 },
+											{ 339, 362 }, { 318, 366 }, { 271, 394 },
+											{ 210, 208 }, { 210, 151 }, { 225, 135 },
+											{ 248, 117 }, { 320,  93 }, { 384, 109 },
+											{ 505, 200 } };
+
+		private int[,] pathNodeBackward = { { 505, 200 }, { 384, 109 }, { 320,  93 },
+											{ 248, 117 }, { 225, 135 }, { 210, 151 },
+											{ 210, 208 }, { 271, 394 }, { 318, 366 },
+											{ 339, 362 }, { 443, 420 }, { 430, 459 },
+											{ 437, 480 }, { 490, 505 }, { 500, 500 },
+											{ 505, 490 } };
 		/// <summary>
 		/// Create a NPC. 
 		/// AGXNASK distribution has npAgent move following a Path.
@@ -85,7 +98,7 @@ namespace AGMGSKv9 {
 			follow.Name = "npFollow";
 			above.Name =  "npAbove";
 			// path is built to work on specific terrain, make from int[x,z] array pathNode
-			path = new Path(stage, pathNode, Path.PathType.LOOP); // continuous search path
+			path = new Path(stage, AGProject1.CustomItems.FORWARD ? pathNodeForward : pathNodeBackward, Path.PathType.LOOP); // continuous search path
 			stage.Components.Add(path);
 			nextGoal = path.NextNode;  // get first path goal
 			backupNextGoal = new NavNode(nextGoal.Translation);

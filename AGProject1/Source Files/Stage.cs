@@ -438,19 +438,19 @@ namespace AGMGSKv9 {
 
 			// Load in 4 treasures placed around the map ********************************************************
 			treasure1 = new AGProject1.Treasure(this, "t1");
-			treasure1.addObject(new Vector3(496 * spacing, terrain.surfaceHeight(496, 500), 500 * spacing), 0);
+			treasure1.addObject(new Vector3(AGProject1.CustomItems.TREASURE_ONE_LOCATION[0] * spacing, terrain.surfaceHeight(AGProject1.CustomItems.TREASURE_ONE_LOCATION[0], AGProject1.CustomItems.TREASURE_ONE_LOCATION[1]), AGProject1.CustomItems.TREASURE_ONE_LOCATION[1] * spacing), 0);
 			Components.Add(treasure1);
 
 			treasure2 = new AGProject1.Treasure(this, "t2");
-			treasure2.addObject(new Vector3(447 * spacing, terrain.surfaceHeight(447, 453), 453 * spacing), 0);
+			treasure2.addObject(new Vector3(AGProject1.CustomItems.TREASURE_TWO_LOCATION[0] * spacing, terrain.surfaceHeight(AGProject1.CustomItems.TREASURE_TWO_LOCATION[0], AGProject1.CustomItems.TREASURE_TWO_LOCATION[1]), AGProject1.CustomItems.TREASURE_TWO_LOCATION[1] * spacing), 0);
 			Components.Add(treasure2);
 
 			treasure3 = new AGProject1.Treasure(this, "t3");
-			treasure3.addObject(new Vector3(100 * spacing, terrain.surfaceHeight(100, 100), 100 * spacing), 0);
+			treasure3.addObject(new Vector3(AGProject1.CustomItems.TREASURE_THREE_LOCATION[0] * spacing, terrain.surfaceHeight(AGProject1.CustomItems.TREASURE_THREE_LOCATION[0], AGProject1.CustomItems.TREASURE_THREE_LOCATION[1]), AGProject1.CustomItems.TREASURE_THREE_LOCATION[1] * spacing), 0);
 			Components.Add(treasure3);
 
 			treasure4 = new AGProject1.Treasure(this, "t4");
-			treasure4.addObject(new Vector3(200 * spacing, terrain.surfaceHeight(200, 400), 400 * spacing), 0);
+			treasure4.addObject(new Vector3(AGProject1.CustomItems.TREASURE_FOUR_LOCATION[0] * spacing, terrain.surfaceHeight(AGProject1.CustomItems.TREASURE_FOUR_LOCATION[0], AGProject1.CustomItems.TREASURE_FOUR_LOCATION[1]), AGProject1.CustomItems.TREASURE_FOUR_LOCATION[1] * spacing), 0);
 			Components.Add(treasure4);
 
 			// create a temple
@@ -497,7 +497,7 @@ namespace AGMGSKv9 {
 			updates++;
 			if (fpsSecond >= 1.0) {
 				inspector.setInfo(10,
-				String.Format("{0} camera    Game time {1:D2}::{2:D2}::{3:D2}    {4:D} Updates/Seconds {5:D} Draws/Seconds",
+				String.Format("{0} camera    Game time {1:D2}::{2:D2}::{3:D2}    {4:D} Updates/Seconds {5:D} Draws/Seconds (NPAgent traveling " + (AGProject1.CustomItems.FORWARD ? "forward)" : "backward)"),
 					currentCamera.Name, time.Hours, time.Minutes, time.Seconds, updates.ToString(), draws.ToString()));
 				draws = updates = 0;
 				fpsSecond = 0.0;
