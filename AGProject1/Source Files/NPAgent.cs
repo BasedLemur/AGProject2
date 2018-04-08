@@ -97,6 +97,8 @@ namespace AGMGSKv9 {
 			first.Name =  "npFirst";
 			follow.Name = "npFollow";
 			above.Name =  "npAbove";
+            IsCollidable = true;  // agent test collision with Collidable set.
+			stage.Collidable.Add(agentObject);  // agents's agentObject can be collided with by others.
 			// path is built to work on specific terrain, make from int[x,z] array pathNode
 			path = new Path(stage, AGProject1.CustomItems.FORWARD ? pathNodeForward : pathNodeBackward, Path.PathType.LOOP); // continuous search path
 			stage.Components.Add(path);

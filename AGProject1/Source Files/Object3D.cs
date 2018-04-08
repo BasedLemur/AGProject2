@@ -343,7 +343,8 @@ public class Object3D  {
 		objectBoundingSphereCenter = Translation;  // set center to instance
 		objectBoundingSphereWorld = Matrix.CreateScale(objectBoundingSphereRadius * 2);
 		objectBoundingSphereWorld *= Matrix.CreateTranslation(objectBoundingSphereCenter);
-		}
+		}   
 
 	}
+    
 }
