@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/image_0000.png</SourceFile>
-  <SourceTime>2018-02-08T16:42:48-08:00</SourceTime>
-  <DestFile>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/bin/DesktopGL/image_0000_0.xnb</DestFile>
-  <DestTime>2018-04-05T14:25:06-07:00</DestTime>
+  <SourceFile>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/image_0000.png</SourceFile>
+  <SourceTime>2018-04-05T21:10:35.4261166-07:00</SourceTime>
+  <DestFile>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/bin/DesktopGL/image_0000_0.xnb</DestFile>
+  <DestTime>2018-04-05T21:19:52.2481286-07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T07:05:36-08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -157,6 +157,8 @@ namespace AGMGSKv9 {
 				if (AGProject1.CustomItems.NPSeekingTreasure) {
 					// Set the treasure to active.
 					treasureGoal.Activate();
+                    AGProject1.CustomItems.NPCNumTreasuresLeft = AGProject1.CustomItems.NPCNumTreasuresLeft + 1; 
+                    AGProject1.CustomItems.NumTreasuresLeft = AGProject1.CustomItems.NumTreasuresLeft - 1; 
 					AGProject1.CustomItems.NPSeekingTreasure = false;
 					AGProject1.CustomItems.TreasureMode = false;
 					// Resume moving to the last active waypoint.

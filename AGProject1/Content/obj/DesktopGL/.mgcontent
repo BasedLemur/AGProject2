@@ -4,22 +4,22 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/100x50x100Marker.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/100x100x100brick.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/boundingSphereV8.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/cloudV3.FBX</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/dogV6.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/magentaAvatarV6.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/redAvatarV6.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/templeV3.fbx</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/inspectorBackground.png</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/marble.png</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/Consolas.spritefont</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/jiggy.x</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/image_0000.png</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/colorTexture.png</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/heightTexture.png</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/62F432A0_c.png</File>
-    <File>D:/Programming/Projects/AGProject1Fixed/AGProject1/Content/bb.x</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/100x50x100Marker.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/100x100x100brick.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/boundingSphereV8.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/cloudV3.FBX</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/dogV6.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/magentaAvatarV6.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/redAvatarV6.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/templeV3.fbx</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/inspectorBackground.png</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/marble.png</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/Consolas.spritefont</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/jiggy.x</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/image_0000.png</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/colorTexture.png</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/heightTexture.png</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/62F432A0_c.png</File>
+    <File>C:/Users/hamou/Source/Repos/AGProject2/AGProject1/Content/bb.x</File>
   </SourceFiles>
 </SourceFileCollection>
